@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header'
+import ToDoList from './components/ToDoList'
+// https://excalidraw.com/#json=4ecIPimYsPenPVqYYh3yy,1gH5XSwfRrE5C-qVn0Kwqg
+// https://tailwindcss.com/
+// https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
 
 function App() {
-  const [count, setCount] = useState(0)
+  // HOMEWORK
+
+  // 01. pri klik na checkmark pozadinata na inputot da e zelena
+  // 02. napravete novo kopce za delete nekoe x ❌ ama iskoriteteja heroicons bibliotekata.
+  // https://heroicons.com/
+  // 03. pod ovaj page da ima history..
+  // znaci site izbrishani todos taskovi
+  // da gi imame vo toj history div
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='bg-sky-400 h-100% flex flex-col items-center pt-56 pb-8 '>
+      <Header />
+      <ToDoList />
+    </div>
   )
 }
 
